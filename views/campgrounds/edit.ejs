@@ -1,0 +1,23 @@
+<%include ../partials/header%>
+
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/campgrounds">Campsites</a></li>
+<li class="breadcrumb-item active" aria-current="page">Add Campsite</li>
+</ol>
+</nav>
+
+<div clas="row">
+    <h1 style = "text-align: center">YelpCamp! Edit <%=campground.name%></h1>
+    <div style = "width:30%; margin: 25px auto;">
+        <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
+            <div class = "form-group"><input class="form-control" type="text" , name="updated[name]" value="<%=campground.name%>"></div>
+            <div class = "form-group"><input class="form-control" type="text" , name="updated[image]" value="<%=campground.image%>"></div>
+            <div class = "form-group"><input class="form-control" type="text" , name="updated[description]" value="<%=campground.description%>"></div>
+            <div class = "form-group"><input class="form-control" type="number" , name="updated[price]" value="<%=campground.price%>" min="0.01" step="0.01"></div>
+            <div class = "form-group"><button class="btn btn-lg btn-primary btn-block">Submit</button></div>
+        </form>
+        <a href="/campgrounds">Click Here to Go Back to the Campgrounds Page<br /></a>
+    </div>
+</div>
+
+<%include ../partials/footer%>

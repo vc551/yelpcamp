@@ -1,0 +1,20 @@
+<%include ../partials/header%>
+
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">Log In</li>
+</ol>
+</nav>
+
+<div clas="row">
+    <h1 style = "text-align: center">YelpCamp! User Login</h1>
+    <div style = "width:30%; margin: 25px auto;">
+        <form action="/login" method="POST">
+            <div class = "form-group"><input class="form-control" type="text" , name="username" placeholder="Username"></div>
+            <div class = "form-group"><input class="form-control" type="password" , name="password" placeholder="Password"></div>
+            <div class = "form-group"><button class="btn btn-lg btn-primary btn-block">Login!</button></div>
+        </form>
+        <a href="/">Click Here to Go Back to the Homepage<br /></a>
+    </div>
+</div>
+
+<%include ../partials/footer%>
