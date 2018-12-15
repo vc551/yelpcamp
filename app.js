@@ -16,7 +16,7 @@ var indexRoutes         = require("./routes/index"),
     commentRoutes       = require("./routes/comments"),
     authRoutes          = require("./routes/auth");
 
-var port = 80;
+var port = 3000;
 
 //mongoose.connect("mongodb://localhost/yelp_camp");    //Local Database
 mongoose.connect("mongodb://vc551u1:yelpcamp551@ds050189.mlab.com:50189/yelpcamp")  //Cloud Hosted Database
