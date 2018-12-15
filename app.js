@@ -18,7 +18,8 @@ var indexRoutes         = require("./routes/index"),
 
 var port = 3000;
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+//mongoose.connect("mongodb://localhost/yelp_camp");    //Local Database
+mongoose.connect("mongodb://vc551u1:yelpcamp551@ds050189.mlab.com:50189/yelpcamp")  //Cloud Hosted Database
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
