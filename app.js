@@ -20,7 +20,7 @@ var port = 3000;
 
 var dbaddr;
 
-if(process.env.DATABASEURL.length>0){
+if(process.env.DATABASEURL && process.env.DATABASEURL.length>0){
     dbaddr=process.env.DATABASEURL;         //Cloud Hosted Database
 }else{
     dbaddr="mongodb://localhost/yelp_camp"; //Local Database
