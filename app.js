@@ -49,6 +49,6 @@ app.use("/campgrounds",campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 app.use(authRoutes);
 
-app.listen(port,()=>{
+app.listen(process.env.PORT||port,()=>{
     console.log("Server started on port "+port);
 });
