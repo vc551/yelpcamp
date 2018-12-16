@@ -18,8 +18,15 @@ var indexRoutes         = require("./routes/index"),
 
 var port = 3000;
 
-//mongoose.connect("mongodb://localhost/yelp_camp");    //Local Database
-mongoose.connect("mongodb://vc551u1:yelpcamp551@ds050189.mlab.com:50189/yelpcamp")  //Cloud Hosted Database
+var dbaddr;
+
+if(process.env.DATABASEURL.length>0){
+    dbaddr=process.env.DATABASEURL;         //Cloud Hosted Database
+}else{
+    dbaddr="mongodb://localhost/yelp_camp"; //Local Database
+}
+
+mongoose.connect(dbaddr);
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
@@ -49,6 +56,6 @@ app.use("/campgrounds",campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 app.use(authRoutes);
 
-app.listen(process.env.PORT||port,()=>{
+app.listen(process.env.PORT||port,process.env.IP,()=>{
     console.log("Server started on port "+port);
 });
