@@ -20,12 +20,11 @@
     padding     : 0px
 }
 
-#site-display {
-    background-color: aliceblue;
+.main-animated{
+    transition-duration: 0.5s;
 }
 
-#site-display:hover {
-    transition-duration: 0.5s;
+.main-campsite-display:hover {
     transform: scale(1.5);
     z-index: 1;
 }
