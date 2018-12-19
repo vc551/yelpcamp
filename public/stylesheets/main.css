@@ -20,8 +20,12 @@
     padding     : 0px
 }
 
+#site-display {
+    background-color: aliceblue;
+}
+
 #site-display:hover {
-    transition-duration: 0.75s;
+    transition-duration: 0.5s;
     transform: scale(1.5);
     z-index: 1;
 }
