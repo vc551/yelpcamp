@@ -19,3 +19,8 @@
     text-align  : center;
     padding     : 0px
 }
+
+#site-display:hover {
+    transition-duration: 0.75s;
+    transform: scale(1.5);
+}
