@@ -20,6 +20,11 @@
     padding     : 0px
 }
 
+#campground-img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
 .main-animated{
     transition-duration: 0.5s;
 }
